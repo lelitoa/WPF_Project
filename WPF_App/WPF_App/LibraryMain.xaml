@@ -5,36 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_App"
         mc:Ignorable="d"
-        Title="LibraryMain" Height="562" Width="999">
+        Title="LibraryMain" Height="600" Width="999">
     <Grid>
         <DataGrid x:Name="gridLibraries" HorizontalAlignment="Left" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="499,36,0,9" Width="475" SelectionChanged="gridLibraries_SelectionChanged" ColumnWidth="SizeToHeader"/>
-        <Label Content="Title:" HorizontalAlignment="Left" Margin="60,87,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Margin="220,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
-        <Label Content="Author:" HorizontalAlignment="Left" Margin="60,121,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="txtAuthor" HorizontalAlignment="Left" Margin="220,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
-        <Label Content="NumberOfPages:" HorizontalAlignment="Left" Margin="60,155,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="txtNumberOfPages" HorizontalAlignment="Left" Margin="220,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
+        <Label Content="Title:" HorizontalAlignment="Left" Margin="62,98,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Margin="222,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
+        <Label Content="Author:" HorizontalAlignment="Left" Margin="62,132,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtAuthor" HorizontalAlignment="Left" Margin="222,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
+        <Label Content="NumberOfPages:" HorizontalAlignment="Left" Margin="62,166,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtNumberOfPages" HorizontalAlignment="Left" Margin="222,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
 
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="339,265,0,0" VerticalAlignment="Top" Click="BtnAdd_Click" FontSize="12" Height="25" Width="80"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="341,276,0,0" VerticalAlignment="Top" Click="BtnAdd_Click" FontSize="12" Height="25" Width="80"/>
         <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="500,11,0,0" VerticalAlignment="Top" Click="BtnLoad_Click" FontSize="12" Height="20" Width="100"/>
-        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="219,491,0,0" VerticalAlignment="Top" Click="BtnUpdate_Click" FontSize="12" Height="25" Width="80"/>
-        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="339,491,0,0" VerticalAlignment="Top" Click="BtnDelete_Click" FontSize="12" Height="25" Width="80"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="219,529,0,0" VerticalAlignment="Top" Click="BtnUpdate_Click" FontSize="12" Height="25" Width="80"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="339,529,0,0" VerticalAlignment="Top" Click="BtnDelete_Click" FontSize="12" Height="25" Width="80"/>
 
-        <Label Content="Title:" HorizontalAlignment="Left" Margin="59,310,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="txtTitle2" HorizontalAlignment="Left" Margin="219,314,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
-        <Label Content="Author:" HorizontalAlignment="Left" Margin="59,344,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="txtAuthor2" HorizontalAlignment="Left" Margin="219,348,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
-        <Label Content="NumberOfPages:" HorizontalAlignment="Left" Margin="59,378,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="txtNumberOfPages2" HorizontalAlignment="Left" Margin="219,382,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
+        <Label Content="Title:" HorizontalAlignment="Left" Margin="59,348,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtTitle2" HorizontalAlignment="Left" Margin="219,352,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
+        <Label Content="Author:" HorizontalAlignment="Left" Margin="59,382,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtAuthor2" HorizontalAlignment="Left" Margin="219,386,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
+        <Label Content="NumberOfPages:" HorizontalAlignment="Left" Margin="59,416,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtNumberOfPages2" HorizontalAlignment="Left" Margin="219,420,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
 
-        <Label Content="Borrower:" HorizontalAlignment="Left" Margin="60,189,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="txtBorrower" HorizontalAlignment="Left" Margin="219,193,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
-        <Label Content="DateOfBorrow:" HorizontalAlignment="Left" Margin="60,223,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <DatePicker x:Name="txtDateOfBorrow" HorizontalAlignment="Left" Margin="220,227,0,0" VerticalAlignment="Top" Height="29" Width="200"/>
-        <Label Content="Borrower:" HorizontalAlignment="Left" Margin="60,415,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="txtBorrower2" HorizontalAlignment="Left" Margin="219,419,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
-        <Label Content="DateOfBorrow:" HorizontalAlignment="Left" Margin="60,449,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <DatePicker x:Name="txtDateOfBorrow2" HorizontalAlignment="Left" Margin="220,453,0,0" VerticalAlignment="Top" Height="29" Width="200"/>
-        <Label Content="Library management" HorizontalAlignment="Left" Margin="60,14,0,0" VerticalAlignment="Top" FontSize="37" FontFamily="Microsoft Sans Serif" FontWeight="Bold"/>
+        <Label Content="Borrower:" HorizontalAlignment="Left" Margin="62,200,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtBorrower" HorizontalAlignment="Left" Margin="221,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
+        <Label Content="DateOfBorrow:" HorizontalAlignment="Left" Margin="62,234,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <DatePicker x:Name="txtDateOfBorrow" HorizontalAlignment="Left" Margin="222,238,0,0" VerticalAlignment="Top" Height="29" Width="200"/>
+        <Label Content="Borrower:" HorizontalAlignment="Left" Margin="60,453,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtBorrower2" HorizontalAlignment="Left" Margin="219,457,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="20"/>
+        <Label Content="DateOfBorrow:" HorizontalAlignment="Left" Margin="60,487,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <DatePicker x:Name="txtDateOfBorrow2" HorizontalAlignment="Left" Margin="220,491,0,0" VerticalAlignment="Top" Height="29" Width="200"/>
+        <Label Content="Library management" HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" FontSize="37" FontFamily="Microsoft Sans Serif" FontWeight="Bold"/>
+        <Label Content="Modify" HorizontalAlignment="Left" Margin="60,311,0,0" VerticalAlignment="Top" FontSize="23" FontFamily="Microsoft Sans Serif" FontWeight="Bold"/>
+        <Label Content="Add new entry" HorizontalAlignment="Left" Margin="62,61,0,0" VerticalAlignment="Top" FontSize="23" FontFamily="Microsoft Sans Serif" FontWeight="Bold"/>
     </Grid>
 </Window>
