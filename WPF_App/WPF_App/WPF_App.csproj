@@ -82,9 +82,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="WPF_8_EF_HMS.xaml.cs">
-      <DependentUpon>WPF_8_EF_HMS.xaml</DependentUpon>
+    <Compile Include="Library.cs">
+      <DependentUpon>LibraryModels.tt</DependentUpon>
     </Compile>
+    <Compile Include="LibraryMain.xaml.cs">
+      <DependentUpon>LibraryMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryModels.edmx</DependentUpon>
+    </Compile>
+    <Page Include="LibraryMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -93,32 +115,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Doctor.cs">
-      <DependentUpon>HospitalSystemModels.tt</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalSystemModels.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalSystemModels.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalSystemModels.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalSystemModels.tt</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalSystemModels.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalSystemModels.edmx</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="WPF_8_EF_HMS.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -138,12 +138,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="HospitalSystemModels.edmx">
+    <EntityDeploy Include="LibraryModels.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HospitalSystemModels.Designer.cs</LastGenOutput>
+      <LastGenOutput>LibraryModels.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="HospitalSystemModels.edmx.diagram">
-      <DependentUpon>HospitalSystemModels.edmx</DependentUpon>
+    <None Include="LibraryModels.edmx.diagram">
+      <DependentUpon>LibraryModels.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -155,22 +155,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HospitalDB.mdf">
+    <Content Include="LibraryDB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="HospitalDB_log.ldf">
+    <Content Include="LibraryDB_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>HospitalDB.mdf</DependentUpon>
+      <DependentUpon>LibraryDB.mdf</DependentUpon>
     </Content>
-    <Content Include="HospitalSystemModels.Context.tt">
+    <Content Include="LibraryModels.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HospitalSystemModels.edmx</DependentUpon>
-      <LastGenOutput>HospitalSystemModels.Context.cs</LastGenOutput>
+      <DependentUpon>LibraryModels.edmx</DependentUpon>
+      <LastGenOutput>LibraryModels.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="HospitalSystemModels.tt">
+    <Content Include="LibraryModels.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HospitalSystemModels.edmx</DependentUpon>
-      <LastGenOutput>HospitalSystemModels.cs</LastGenOutput>
+      <DependentUpon>LibraryModels.edmx</DependentUpon>
+      <LastGenOutput>LibraryModels.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
