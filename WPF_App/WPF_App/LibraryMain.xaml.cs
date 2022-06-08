@@ -24,15 +24,15 @@ namespace WPF_App
             InitializeComponent();
 
             LibraryDBEntities db = new LibraryDBEntities();
-            //Wyswietla poczatkowy wyglad bazy
+            //Wyswietla poczatkowy wyglad bazy (3 kolumny)
             var lib = from d in db.Libraries
                        select new
                        {
                            Title = d.Title,
                            Author = d.Author,
                            NumberOfPages = d.NumberOfPages,
-                           Borrower = d.Borrower,
-                           DateOfBorrow = d.DateOfBorrow,
+                           //Borrower = d.Borrower,
+                           //DateOfBorrow = d.DateOfBorrow,
                        };
 
             foreach (var item in lib)
@@ -40,13 +40,14 @@ namespace WPF_App
                 Console.WriteLine(item.Title);
                 Console.WriteLine(item.Author);
                 Console.WriteLine(item.NumberOfPages);
-                Console.WriteLine(item.Borrower);
-                Console.WriteLine(item.DateOfBorrow);
+                //Console.WriteLine(item.Borrower);
+                //Console.WriteLine(item.DateOfBorrow);
             }
 
             this.gridLibraries.ItemsSource = lib.ToList();
         }
 
+        //Dodaje dane do bazy
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             LibraryDBEntities db = new LibraryDBEntities();
@@ -65,6 +66,7 @@ namespace WPF_App
             BtnLoad_Click(sender, e);
         }
 
+        //Laduje zawartosc calej bazy do tabeli
         private void BtnLoad_Click(object sender, RoutedEventArgs e)
         {
             LibraryDBEntities db = new LibraryDBEntities();
@@ -72,6 +74,7 @@ namespace WPF_App
             this.gridLibraries.ItemsSource = db.Libraries.ToList();
         }
 
+        //Modyfikuje dane w bazie
         private void BtnUpdate_Click(object sender, RoutedEventArgs e)
         {
             LibraryDBEntities db = new LibraryDBEntities();
@@ -96,6 +99,7 @@ namespace WPF_App
         }
 
         private int updatingLibraryID = 0;
+        //Pobiera dane z tabeli/grid`a
         private void gridLibraries_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (this.gridLibraries.SelectedIndex >= 0)
@@ -117,8 +121,10 @@ namespace WPF_App
             }
         }
 
+        //Usuwa dane z bazy
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
+            //Zapobiega przypadkowemu usunieciu danych
             MessageBoxResult msgBoxResult = MessageBox.Show("Are you sure you want to remove this rent?",
                 "The rent has been removed",
                 MessageBoxButton.YesNo,
